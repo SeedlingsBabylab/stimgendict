@@ -24,7 +24,7 @@ for example:
 ```bash
 $: python sgd.py data output.csv
 ```
-# csv output
+## csv output
 
 The csv output will be of the form:
 

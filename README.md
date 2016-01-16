@@ -1,6 +1,6 @@
 # sgd (stimuli generated dictionary)
 
-![screenshot](/data/sgd-screenshot.png)
+<img src="/data/sgd-screenshot.png" width="450">
 
 This script walks a directory tree looking for files of the form AB_CD_stimuli.xlsx.
 It pulls the pair_alpha, pair_words, pair_kind, and subject_number from each file and fills them

@@ -1,7 +1,5 @@
 # sgd (stimuli generated dictionary)
 
-<img src="/data/sgd-screenshot.png" width="450">
-
 This script walks a directory tree looking for files of the form AB_CD_stimuli.xlsx.
 It pulls the pair_alpha, pair_words, pair_kind, and subject_number from each file and fills them
 into an output csv file.
@@ -26,3 +24,6 @@ The /data directory has nested _stimuli.xlsx files that you can try the script o
 The csv output will be of the form:
 
 pair_alpha, pair_words, pair_kind, SubjectNumber
+
+
+<img src="/data/sgd-screenshot.png" width="550">

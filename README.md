@@ -17,7 +17,11 @@ $: pip install openpyxl
 $: python sgd.py
 ```
 
+You can select the subjects/visits you want to choose in the GUI that pops up. After selecting them, click "Scan Directory" to find all the appropriate files in a directory. Then click "Output CSV" to select a destination for the csv file that will be generated.
+
 The /data directory has nested _stimuli.xlsx files that you can try the script on.
+
+
 
 ## csv output
 

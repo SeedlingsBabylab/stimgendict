@@ -9,11 +9,6 @@ import os
 import sys
 import re
 
-start_dir = ""
-output_csv_path = ""
-
-output_data = []
-
 class MainWindow():
     def __init__(self, root):
         self.root = root
@@ -103,7 +98,6 @@ class MainWindow():
     def set_start_dir(self):
         self.start_dir = tkFileDialog.askdirectory()
         print "self.start_dir:  " + self.start_dir
-        #self.show_start_dir_label()
         self.map_selections()
         self.walk_tree(self.start_dir)
 
@@ -115,7 +109,6 @@ class MainWindow():
     def walk_tree(self, path):
         for root, dirs, files in os.walk(path):
             for file in files:
-                #self.filename_regx.search(file)
                 if "_stimuli.xlsx" in file:
                     pair = (file[0:2], file[3:5])
                     if self.check_selection_map(pair):
@@ -225,33 +218,6 @@ class MainWindow():
         self.visit_16_button.deselect()
         self.visit_18_button.deselect()
         #print self.selection_map
-
-def read_stimuli_xml(path):
-    wb = load_workbook(path)
-    sheet = wb.active
-
-    subject_number = os.path.split(path)[1][0:5]
-
-    for i in range(8):
-        temp = [None] * 4
-
-        pair = sheet["H{}".format(i+2)].value
-        pair_words = sheet["I{}".format(i+2)].value
-        pair_kind =sheet["J{}".format(i+2)].value
-
-        temp[0] = pair
-        temp[1] = pair_words
-        temp[2] = pair_kind
-        temp[3] = subject_number
-        output_data.append(temp)
-
-def walk_tree(path):
-
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            if "_stimuli.xlsx" in file:
-                read_stimuli_xml(os.path.join(root, file))
-
 
 if __name__ == "__main__":
 

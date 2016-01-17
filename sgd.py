@@ -221,13 +221,6 @@ class MainWindow():
 
 if __name__ == "__main__":
 
-    #start_dir = sys.argv[1]
-    #output_csv_path = sys.argv[2]
-
     root = Tk()
     MainWindow(root)
     root.mainloop()
-
-    #walk_tree(start_dir)
-
-    #output_csv()

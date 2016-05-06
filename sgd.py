@@ -45,7 +45,7 @@ class MainWindow():
         self.subject_num_list = Listbox(self.main_frame,
                                         selectmode=MULTIPLE,
                                         width=6)
-        for num in range(1,46):
+        for num in range(1,47):
             self.subject_num_list.insert(END, num)
 
         self.visit_num_label = Label(self.main_frame, text="Visit Number")
